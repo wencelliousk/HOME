@@ -1,0 +1,838 @@
+Build a complete, polished, production-quality real-estate prize-promotion website using **HTML, CSS and vanilla JavaScript**.
+
+The website must feel like it was designed by an experienced U.S. real-estate/luxury-property creative team — **not like an AI-generated template**. Avoid generic gradients, excessive rounded cards, excessive glassmorphism, fake statistics, stock-looking layouts, or repetitive AI-style copy.
+
+The design should feel premium, editorial, trustworthy, warm and modern.
+
+IMPORTANT:
+This is currently a **front-end prototype pending legal review**. Do NOT claim that the promotion is legally approved, licensed, authorized, or compliant. Do NOT invent licenses, permits, lawyers, regulators, odds, registration numbers, charity status, or government approval.
+
+The property is located at:
+
+**2650 SW 22nd Court
+Gresham, Oregon 97080
+USA**
+
+The property information supplied below is provided by the owner/user and should be presented as supplied, while clearly separating verified facts from information that still needs confirmation.
+
+==================================================
+PROJECT STRUCTURE
+=================
+
+Do NOT make this a one-page website.
+
+Create these separate pages:
+
+1. index.html
+2. property.html
+3. how-it-works.html
+4. enter.html
+5. rules.html
+6. faq.html
+7. contact.html
+8. privacy.html
+9. terms.html
+
+Also create:
+
+10. style.css
+11. script.js
+
+Keep the navigation consistent across every page.
+
+Use semantic HTML5.
+
+Make everything fully responsive for:
+
+* desktop
+* laptop
+* tablet
+* mobile
+
+==================================================
+BRAND DIRECTION
+===============
+
+Create a sophisticated property brand.
+
+Suggested brand name:
+
+**HAVEN HOUSE**
+
+Optional campaign wording:
+
+**THE HAVEN HOUSE DRAW**
+
+Do not make the branding look like a casino or gambling website.
+
+The visual language should feel closer to:
+
+* luxury real estate
+* architectural magazine
+* premium property listing
+* private residence
+* sophisticated American lifestyle brand
+
+Use a restrained palette:
+
+* warm ivory
+* soft stone
+* charcoal
+* muted natural green
+* subtle warm bronze/rust accent
+
+Avoid neon colors.
+
+Use elegant serif typography for major headings and a clean sans-serif for navigation/body text.
+
+Create subtle animation, not cartoonish animation.
+
+==================================================
+USE ALL 23 PHOTOS
+=================
+
+There are **23 real property images** supplied by the user.
+
+Do not ignore them.
+
+Create a sophisticated image system using all 23 images.
+
+Where the actual image files are not yet connected, create clearly labeled image placeholders/comments such as:
+
+<!-- PROPERTY IMAGE 01 HERE -->
+
+<!-- PROPERTY IMAGE 02 HERE -->
+
+...
+
+<!-- PROPERTY IMAGE 23 HERE -->
+
+Do not generate fake property photos.
+
+Use the images in different sections:
+
+* hero
+* exterior
+* front elevation
+* living room
+* kitchen
+* dining
+* primary bedroom
+* primary bathroom
+* bedrooms
+* office/den
+* bonus room
+* family room
+* fireplace
+* deck
+* backyard
+* landscaping
+* garage
+* neighborhood/location
+* detail shots
+
+Create an attractive gallery on property.html.
+
+Include:
+
+* masonry-style gallery
+* lightbox
+* next/previous buttons
+* image counter
+* keyboard navigation
+* smooth opening animation
+* mobile swipe-friendly behavior if possible
+
+Do not stretch or distort images.
+
+Use object-fit: cover where appropriate.
+
+==================================================
+USE THE AERIAL VIDEO
+====================
+
+The user has **one aerial video of the property**.
+
+The video MUST actually play inside the website.
+
+Create a large cinematic video section.
+
+Use:
+
+<video controls playsinline preload="metadata">
+
+and leave a clearly marked area for the real video file:
+
+<!-- PROPERTY AERIAL VIDEO HERE -->
+
+Example expected implementation:
+
+<video controls playsinline poster="...">
+    <source src="property-aerial.mp4" type="video/mp4">
+</video>
+
+Do NOT embed a fake YouTube video.
+
+Do NOT use an external video unless explicitly configured later.
+
+The video section should include:
+
+* cinematic aspect ratio
+* play button
+* controls
+* responsive sizing
+* poster image placeholder
+* graceful fallback message
+
+On the homepage, show a muted/autoplay preview if technically appropriate and allowed, but make sure the full video can be manually played with controls.
+
+==================================================
+PROPERTY INFORMATION
+====================
+
+Use this property description carefully:
+
+"Welcome to this beautifully maintained private retreat backing to serene greenspace and ideally located near Butler Creek Greenway Trails and Butler Creek Park.
+
+Built in 1993, this spacious 2,633 SF home sits on a 9,685 SF lot and offers 4 bedrooms, or 3 bedrooms plus a dedicated office/den, and 2.5 baths.
+
+Soaring ceilings, skylights, and expansive windows fill the home with natural light.
+
+The gourmet kitchen features a center island, stainless steel appliances, built-in gas cooktop with downdraft, new built-in oven, dishwasher, refrigerator, granite countertops, pantry, oak cabinetry and flooring, plus a bright dining nook with direct access to the deck and backyard via slider.
+
+The primary suite offers both walk-in and reach-in closets, along with a private bath featuring dual vanities, a walk-in shower, and skylight.
+
+Additional living spaces include a formal dining room, vaulted living room with large picture windows, and a comfortable family room with a brick gas fireplace.
+
+Upstairs, the bonus room features vaulted ceilings, a ceiling fan, built-in desk, and attic storage.
+
+The main-level laundry room includes a utility sink, built-in cabinetry, workspace, and ironing station.
+
+Additional highlights include central air conditioning, gas forced-air heating, gas water heater, central vacuum system, security system, abundant storage, attached two-car garage, and no HOA dues.
+
+A one-year home warranty is included.
+
+The beautifully landscaped grounds showcase mature plantings, brick walkways, and a private patio, creating an ideal setting for outdoor living and entertaining.
+
+Conveniently located near Schools, Parks, Trails, Shopping, Dining, Historic Downtown Gresham, Oxbow Regional Park, Springwater Corridor Trail, and Hogan Butte Nature Park."
+
+Do not add facts that aren't provided.
+
+==================================================
+HOMEPAGE
+========
+
+Create a dramatic full-width hero.
+
+Use one of the best property images.
+
+Hero:
+
+THE HAVEN HOUSE
+
+"More than a house.
+A place to call home."
+
+Include:
+
+* Explore the Property
+* How It Works
+* Enter / Participate button
+
+Include a subtle status area showing:
+
+PROMOTION STATUS
+"Legal review / opening date pending"
+
+Do not say "LIVE NOW" until the owner activates it.
+
+==================================================
+COUNTDOWN
+=========
+
+Create a beautiful JavaScript countdown component.
+
+The requested campaign duration is approximately **one month**.
+
+Do NOT hard-code a misleading "one month" countdown that resets every time someone loads the website.
+
+Create one clearly defined JavaScript campaign end date variable:
+
+const CAMPAIGN_END_DATE = "YYYY-MM-DDTHH:MM:SS";
+
+The owner can replace it with the lawyer-approved official closing date.
+
+Display:
+
+DAYS
+HOURS
+MINUTES
+SECONDS
+
+Animate the numbers smoothly.
+
+When the countdown reaches zero:
+
+* stop the timer
+* display "ENTRY PERIOD CLOSED"
+* disable entry buttons
+* prevent checkout
+* show the official closing message
+
+Do not automatically restart the countdown.
+
+==================================================
+ENTRY PAGE
+==========
+
+Create a premium multi-step entry interface.
+
+STEP 1 — Choose entry
+
+Only show these two options:
+
+**$5**
+1 Entry
+
+**$25**
+5 Entries
+
+Do not add other packages.
+
+Make the selected package visually obvious.
+
+STEP 2 — Participant information
+
+Collect:
+
+* Full legal name
+* Email address
+* Phone number
+
+Add:
+
+* age/eligibility confirmation
+* state selection
+* agreement to Official Rules
+* privacy acknowledgement
+
+Do not ask for unnecessary sensitive information.
+
+STEP 3 — PAYMENT PLACEHOLDER
+
+The user specifically wants the payment area left ready for later integration.
+
+Create a clearly labeled payment section:
+
+**DEBIT / CREDIT CARD**
+
+But DO NOT build a fake card processor.
+
+Do NOT collect or store:
+
+* full card number
+* CVV
+* PIN
+* bank password
+* online banking credentials
+
+Instead create a clearly marked integration container:
+
+<!-- PAYMENT PROVIDER INTEGRATION GOES HERE -->
+
+Use a button such as:
+
+"Continue to Secure Payment"
+
+For now, clicking it can display:
+
+"Payment integration pending legal and payment-provider approval."
+
+The owner will later replace this area with the approved bank/payment provider's hosted checkout or tokenized payment solution.
+
+==================================================
+VERY IMPORTANT PAYMENT ARCHITECTURE
+===================================
+
+Do NOT write JavaScript that stores card information.
+
+Do NOT put secret API keys in frontend JavaScript.
+
+Do NOT create:
+
+localStorage.setItem("cardNumber"...)
+
+Do NOT create fake card validation.
+
+Do NOT send card details to the website's own backend.
+
+Instead leave a clean integration function:
+
+function initializePaymentCheckout(entryData) {
+// PAYMENT PROVIDER INTEGRATION HERE
+}
+
+The future provider should receive the transaction through its approved secure checkout/tokenization flow.
+
+==================================================
+ENTRY CONFIRMATION
+==================
+
+After a successful future payment integration, the website should eventually be able to display:
+
+ENTRY CONFIRMED
+
+Participant:
+[Name]
+
+Email:
+[email]
+
+Entries:
+[number]
+
+Order/reference:
+[reference]
+
+Amount:
+[$5 or $25]
+
+Date:
+[date]
+
+Do not generate a fake confirmation for a real payment.
+
+==================================================
+HOW IT WORKS
+============
+
+Create an elegant six-step explanation:
+
+01
+Review eligibility
+
+02
+Review the property
+
+03
+Choose your entry
+
+04
+Submit your information
+
+05
+Complete approved payment process
+
+06
+Drawing and winner verification
+
+Clearly state that the final process depends on the published Official Rules.
+
+==================================================
+LEGAL / OFFICIAL RULES PAGE
+===========================
+
+Create a professional legal-document layout.
+
+Include placeholders for attorney-approved language.
+
+Sections:
+
+1. Sponsor
+2. Promotion Period
+3. Eligibility
+4. Geographic Restrictions
+5. Entry Methods
+6. Alternative Method of Entry
+7. Entry Limits
+8. Prize Description
+9. Approximate Retail Value
+10. Property Title / Transfer Conditions
+11. Taxes
+12. Closing Costs
+13. Odds
+14. Drawing Procedure
+15. Winner Notification
+16. Winner Verification
+17. Disqualification
+18. Publicity
+19. Privacy
+20. Limitation of Liability
+21. Dispute Resolution
+22. Governing Law
+23. State-Specific Restrictions
+24. Contact Information
+
+Every section that requires legal information should contain an obvious:
+
+[ATTORNEY TO REVIEW / COMPLETE]
+
+Do NOT invent legal language and present it as approved law.
+
+==================================================
+LEGAL COMPLIANCE CONTENT
+========================
+
+Include a prominent notice:
+
+"IMPORTANT: This promotion is not currently accepting entries. The final entry method, eligibility requirements, payment structure, alternative method of entry, official rules and participating jurisdictions are subject to legal review."
+
+Because the property is in Oregon, specifically include a section:
+
+OREGON LEGAL REVIEW
+
+"Participation from Oregon and any other jurisdiction is subject to applicable federal, state and local law and the final Official Rules."
+
+Do NOT say the promotion is legal in Oregon.
+
+Do NOT say the $5 payment model is approved.
+
+Do NOT claim that a lawyer, government agency or regulator has approved anything.
+
+Include a legal-review checklist for the owner:
+
+* Confirm whether the proposed promotion constitutes a lottery, raffle, sweepstakes or another regulated promotion.
+* Confirm whether the sponsor is legally eligible to conduct the promotion.
+* Determine whether a free alternative method of entry is required.
+* Determine eligible jurisdictions.
+* Determine state registration/bonding requirements where applicable.
+* Determine advertising/disclosure requirements.
+* Determine tax treatment of the property prize.
+* Determine title-transfer requirements.
+* Determine property insurance requirements.
+* Determine closing-cost responsibility.
+* Determine winner verification requirements.
+* Determine privacy/data-retention requirements.
+* Review payment processor/bank requirements.
+* Review age and residency restrictions.
+* Review official odds disclosure.
+* Review all state-specific restrictions.
+
+The website must never imply that this checklist itself constitutes legal advice.
+
+==================================================
+FTC / CONSUMER DISCLOSURES
+==========================
+
+Create a legal-review section that reminds the owner to address:
+
+* whether purchase/payment is required
+* whether a free method of entry is available
+* how odds are determined
+* material costs/conditions
+* prize value
+* eligibility
+* restrictions
+
+The FTC states that legitimate prize promotions do not require payment to participate or win, and if payment is required for a chance at a prize, the promotion may constitute a lottery. Federal and state laws must therefore be reviewed before launch.
+
+Link the legal-review references to official government sources where appropriate.
+
+Do not copy large portions of government text.
+
+==================================================
+FAQ
+===
+
+Include questions such as:
+
+What is the Haven House promotion?
+
+Where is the property?
+
+How much does an entry cost?
+
+What does the $25 option provide?
+
+Who can participate?
+
+When does the entry period close?
+
+How will the winner be selected?
+
+What are the odds?
+
+What happens after someone wins?
+
+Who pays taxes and closing costs?
+
+Can I enter without making a payment?
+
+Is the promotion currently open?
+
+How is my personal information protected?
+
+How is payment processed?
+
+Make answers clearly indicate when information is still pending attorney review.
+
+==================================================
+CONTACT PAGE
+============
+
+Create a professional contact page.
+
+Show:
+
+Haven House
+2650 SW 22nd Court
+Gresham, Oregon 97080
+USA
+
+Also include placeholders:
+
+Email:
+[OFFICIAL EMAIL HERE]
+
+Phone:
+[OFFICIAL PHONE HERE]
+
+Business/legal entity:
+[LEGAL BUSINESS NAME HERE]
+
+Do not invent an email address or phone number.
+
+Include a contact form:
+
+Name
+Email
+Phone
+Subject
+Message
+
+==================================================
+PRIVACY
+=======
+
+Create a proper privacy-policy placeholder page.
+
+Include sections for:
+
+* information collected
+* account information
+* contact information
+* payment information
+* payment processor
+* cookies
+* analytics
+* security
+* retention
+* sharing
+* legal requests
+* user rights
+* children's privacy
+* contact
+
+Clearly mark it for attorney review.
+
+==================================================
+TERMS
+=====
+
+Create a terms page covering:
+
+* website use
+* intellectual property
+* accuracy of property information
+* third-party services
+* payment-provider integration
+* prohibited use
+* disclaimers
+* limitation of liability
+* governing law placeholder
+* dispute resolution placeholder
+
+Mark legal sections for attorney review.
+
+==================================================
+ANIMATIONS
+==========
+
+Use JavaScript and CSS for sophisticated animations.
+
+Include:
+
+* scroll reveal
+* image fade/scale reveal
+* staggered text animation
+* animated navigation
+* hover image zoom
+* smooth buttons
+* countdown number transitions
+* gallery transitions
+* lightbox animation
+* subtle parallax on desktop
+* section entrance animations
+* animated statistics
+* video reveal
+* FAQ accordion animation
+* entry-package selection animation
+* form validation animation
+
+Do NOT over-animate.
+
+The animations should feel like a premium real-estate website.
+
+Respect:
+
+@media (prefers-reduced-motion: reduce)
+
+and significantly reduce/disable animation for users who request reduced motion.
+
+==================================================
+VIDEO
+=====
+
+The aerial video should be one of the main visual elements.
+
+On the homepage:
+
+* cinematic video section
+* large play button
+* muted preview where appropriate
+* controls
+* responsive sizing
+
+On property.html:
+
+* full aerial tour section
+* video controls
+* poster image
+* caption:
+
+"An aerial view of the property and surrounding area."
+
+Do not claim that the video shows anything that cannot be verified from the actual video.
+
+==================================================
+MAP
+===
+
+Create a location section for:
+
+2650 SW 22nd Court
+Gresham, Oregon 97080
+
+For the initial prototype, use a styled map placeholder:
+
+<!-- MAP / GOOGLE MAPS / MAPBOX INTEGRATION HERE -->
+
+Do not invent coordinates.
+
+==================================================
+SECURITY
+========
+
+The frontend must NOT:
+
+* store payment card numbers
+* store CVV
+* store PIN
+* expose API secret keys
+* pretend that payment succeeded
+* create fake transaction IDs for real transactions
+* claim a user has entered if payment hasn't actually succeeded
+
+Use placeholder functions for future backend/payment integration.
+
+==================================================
+ADMIN-READY ARCHITECTURE
+========================
+
+Structure the JavaScript so that a future backend can provide:
+
+* campaign status
+* opening date
+* closing date
+* entry count
+* package availability
+* payment status
+* participant confirmation
+* winner record
+
+Do not fake these values as real production data.
+
+==================================================
+COPY STYLE
+==========
+
+The writing should sound human and premium.
+
+Avoid phrases like:
+
+"Welcome to our amazing platform!"
+
+"Experience the future of winning!"
+
+"Revolutionary opportunity!"
+
+Instead use restrained real-estate language.
+
+Example:
+
+"A private retreat framed by mature landscaping, generous natural light and direct access to the outdoors."
+
+Keep the property description grounded in the information supplied by the owner.
+
+==================================================
+FOOTER
+======
+
+Include:
+
+Haven House
+
+2650 SW 22nd Court
+Gresham, Oregon 97080
+
+Property
+How It Works
+Official Rules
+FAQ
+Privacy
+Terms
+Contact
+
+Also display:
+
+"PROMOTION NOT CURRENTLY OPEN — LEGAL REVIEW PENDING"
+
+and:
+
+"© 2026 Haven House"
+
+==================================================
+FINAL QUALITY REQUIREMENTS
+==========================
+
+The finished site must:
+
+* look professionally designed
+* not look AI-generated
+* use the supplied 23 photos
+* use the supplied aerial video
+* have multiple pages
+* work on mobile
+* have excellent typography
+* have smooth animations
+* have a functional countdown
+* have an attractive property gallery
+* have a working lightbox
+* have a working entry-package selector
+* have name/email/phone fields
+* have $5 and $25 options only
+* have a payment integration placeholder
+* NOT collect raw card information
+* NOT claim legal approval
+* NOT invent legal facts
+* clearly separate promotional copy from legal requirements
+* clearly mark attorney-review sections
+* use the actual property address supplied above
+* use the actual property details supplied above
+* include all 23 image placeholders
+* include the aerial video placeholder
+* make the video playable inside the webpage once the real MP4 is added
+* include a one-month campaign countdown controlled by one JavaScript end-date variable
+* automatically close the entry interface when the countdown reaches zero
+
+Most importantly, build this as a **real-looking premium property website**, not as a generic raffle template.
